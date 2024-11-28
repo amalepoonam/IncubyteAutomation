@@ -57,7 +57,7 @@ And('User enter emailId',()=>{
     })
 })
 And('User enter password',()=>{
-    signPageObj.enterUserPassword();
+    signPageObj.enterRegisterUserPassword();
 })
 And('User click on signIn button',()=>{
     signPageObj.clickSignInBtn();

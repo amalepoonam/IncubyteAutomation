@@ -1,5 +1,5 @@
 
-import createAccountPage from './createAccountPage';
+// import createAccountPage from './createAccountPage';
 
  export class signInPage {
     user = require('../fixtures/userData.json')
@@ -11,8 +11,8 @@ import createAccountPage from './createAccountPage';
         cy.get("#email").type(uniqueEmailId);
 
     }
-    enterUserPassword() {
-        cy.get("#pass[title]").type(this.user.userPwd);
+    enterRegisterUserPassword() {
+    cy.get("#pass[title]").type("Poonam@789");
     }
     clickSignInBtn() {
         cy.contains('button', 'Sign In').click();
