@@ -1,0 +1,11 @@
+{
+
+    "firstName":"Poonam",
+    "lastName":"Amale",
+    "emailId":"poonam@gmail.com",
+    "userPwd":"Poonam@789",
+    "confirmPwd":"Poonam@789",
+    "thankYouMsg":"Thank you for registering with Main Website Store.",
+    "myAccountPageTitle":"My Account",
+    "welcomeText":"Welcome"
+}
