@@ -11,19 +11,21 @@
         cy.get("#email").type(uniqueEmailId);
 
     }
-    enterRegisterUserPassword() {
-    cy.get("#pass[title]").type("Poonam@789");
+    enterUserPassword(){
+        cy.wait(3000);
+    cy.get("input[name='login[password]']").type(this.user.userPwd);
     }
     clickSignInBtn() {
         cy.contains('button', 'Sign In').click();
     }
     
-    welcomeTextvisible() {
-        cy.wait(2000);
-        const welcomeMsg= "Welcome"
-        cy.get('greet.welcome .logged-in').eq(0).invoke('text').then((actText) => {
-            const text = actText.trim();
-            expect(text).include(welcomeMsg);
+    welcomeTextVisibility() {
+
+        const welcomeMsg= "Welcome, Poonam Amale!"
+        cy.get("div[class='panel header'] span[class='logged-in']").invoke('text').then((actText) => {
+           
+             const trimmedText = actText.trim();
+            expect(trimmedText).include(welcomeMsg);
         })
     }
 }

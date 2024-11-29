@@ -36,7 +36,7 @@ Then('My Account page title should display',()=>{
     myAccountObj.myAccountPageTitleVisible();
 })
 And('Thank you message should be visible',()=>{
-    myAccountObj.verifyThankUMsgForRegister();
+    myAccountObj.verifyThankYouMsgForRegister();
 })
 And('existing user details should be visible',()=>{
     cy.readFile("cypress/fixtures/create.json").then((readData) => {
@@ -54,14 +54,15 @@ And('User enter emailId',()=>{
     cy.readFile("cypress/fixtures/create.json").then((readData) => {
         cy.log("Read value: " + readData.registeredEmail); 
     signPageObj.enterUserEmailId(readData.registeredEmail);
+    
     })
 })
-And('User enter password',()=>{
-    signPageObj.enterRegisterUserPassword();
+And('User enter resitered password',()=>{
+    signPageObj.enterUserPassword();
 })
 And('User click on signIn button',()=>{
     signPageObj.clickSignInBtn();
 })
  Then('User navigate to user account and Welcome text should be display',()=>{
-    signPageObj.welcomeTextvisible();
+    signPageObj.welcomeTextVisibility();
 })

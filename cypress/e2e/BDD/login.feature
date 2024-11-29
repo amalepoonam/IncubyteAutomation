@@ -16,6 +16,6 @@ And existing user details should be visible
 Scenario: Verify login functionality
 Given User click on SignIn link
 When User enter emailId 
-And User enter password
+And User enter resitered password
 And User click on signIn button
 Then User navigate to user account and Welcome text should be display

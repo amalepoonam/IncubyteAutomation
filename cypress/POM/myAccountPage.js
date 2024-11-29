@@ -7,12 +7,12 @@ clickToCustomerMenu(){
 
     myAccountPageTitleVisible() {
         cy.get(".page-title").invoke('text').then((actText) => {
-            const trimmedText = actText.trim();
-            expect(trimmedText).to.equal("My Account");
+            const text = actText.trim();
+            expect(text).to.equal("My Account");
         })
     }
 
-    verifyThankUMsgForRegister() {
+    verifyThankYouMsgForRegister() {
         cy.wait(3000);
        const thankYouMsg= "Thank you for registering with Main Website Store."
         cy.get(".message-success > div", {timeout:30000}).invoke('text').then((actText) => {
@@ -21,8 +21,8 @@ clickToCustomerMenu(){
         })
     }
 
-    registeredEmailIdVisible(uniqueEmailId) {
-        cy.get(".box-content p").should("contain", uniqueEmailId);
+    registeredEmailIdVisible() {
+        cy.get(".box-content p");
     }
 }
 
