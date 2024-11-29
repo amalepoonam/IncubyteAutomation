@@ -1,4 +1,4 @@
-Feature: User Account Creation and Login
+Feature: Create an account and singIn with same account
 Background:
         Given User navigate to LUMA application
 Scenario: Verify Create an Account functionality
